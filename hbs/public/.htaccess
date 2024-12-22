@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Ensure directory listings are disabled
+  Options -Indexes
+
+  # Allow access to existing files and directories
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Rewrite requests without a file extension to .html
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^/]+)$ $1.html [L]
+
+  # Serve the requested .html file directly
+  RewriteRule ^(.*)\.html$ $1.html [L]
+
+  # Custom error pages
+  # ErrorDocument 403 /403.html
+  ErrorDocument 404 /404.html
+</IfModule>
