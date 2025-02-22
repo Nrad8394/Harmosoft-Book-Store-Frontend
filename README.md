@@ -25,7 +25,7 @@ Welcome to **HarmoSoft Book Store**, an open-source online platform dedicated to
 
 ### 1️⃣ Clone the Repository:
 ```sh
-git clone https://github.com/yourusername/harmosoft-books.git
+git clone https://github.com/nrad8394/harmosoft-books.git
 cd harmosoft-books
 ```
 
